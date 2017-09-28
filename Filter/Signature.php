@@ -5,7 +5,7 @@ use ZJPHP\Base\ZJPHP;
 use ZJPHP\Base\Component;
 use ZJPHP\Base\FilterInterface;
 use Klein\Exceptions\HttpException;
-use ZJPHP\JWT\Facade\Authentication;
+use ZJPHP\JWT\Facade\JwtSub;
 
 class Signature extends Component implements FilterInterface
 {
@@ -33,7 +33,7 @@ class Signature extends Component implements FilterInterface
         }
 
         // Verify the user signature
-        $signature = Authentication::sign($request_data, $app->session_key);
+        $signature = JwtSub::sign($request_data, $app->session_key);
         if ($request_data['signature'] !== $signature) {
             throw HttpException::createFromCode(401);
         }

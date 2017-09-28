@@ -3,13 +3,13 @@ namespace ZJPHP\JWT\Facade;
 
 use ZJPHP\Base\Facade;
 
-class Authentication extends Facade
+class JwtSub extends Facade
 {
     /**
      * @inheritDoc
      */
     public static function getFacadeComponentId()
     {
-        return 'authentication';
+        return 'jwtSub';
     }
 }

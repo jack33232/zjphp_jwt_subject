@@ -16,7 +16,7 @@ use Lcobucci\JWT\ValidationData;
 use Lcobucci\JWT\Signer\Keychain;
 use Lcobucci\JWT\Signer\Rsa\Sha256;
 
-class Authentication extends Component
+class JwtSub extends Component
 {
     private $_jwtRsa = [];
     private $_jwtIssuer = BASE_URL;
