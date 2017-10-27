@@ -19,7 +19,7 @@ use Lcobucci\JWT\Signer\Rsa\Sha256;
 class JwtSub extends Component
 {
     private $_jwtRsa = [];
-    private $_jwtIssuer = BASE_URL;
+    private $_jwtIssuer = '';
     private $_jwtSchema = 'Bearer';
     private $_jwtPoolThreshold = 5000;
 
